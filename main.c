@@ -3,7 +3,7 @@
 
 typedef char *(FunctionPointer)(char *);
 
-extern char RunCS(FunctionPointer Foo, char *ptr);
+extern char * RunCS(FunctionPointer Foo, char *ptr);
 
 char * Foo(char *ptr)
 {
@@ -20,12 +20,12 @@ int main()
 
     printf("%s\n", ptr);
 
-    char x = RunCS(&Foo, ptr);
-    
-    if(x == '\0')
+    char * x = RunCS(&Foo, ptr);
+
+    if(*x == '\0')
     {
         printf("error");
     }
 
-    printf("%s\n", ptr);
+    printf("%s\n", x);
 }
