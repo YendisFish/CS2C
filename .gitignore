@@ -6,6 +6,8 @@
 *CS2*.so
 *.sln
 
+main
+
 .vscode/
 
 # User-specific files
